@@ -1,1 +1,1 @@
-# spaLuckyLand
+# Single Page Application Lucky Land
