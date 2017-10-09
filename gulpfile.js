@@ -12,7 +12,7 @@ gulp.task('stylus', function () {
     return gulp.src('src/stylus/main.styl')
         .pipe(stylus())
         .pipe(autoprefixer(['last 15 version', '> 1%', 'ie 8'], {cascade: true}))
-        .pipe(gulp.dest('src/css')) //destination
+        .pipe(gulp.dest('src/css'))
         .pipe(browserSync.reload({stream: true}))
 });
 
