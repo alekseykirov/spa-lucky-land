@@ -78,6 +78,7 @@
   -webkit-box-shadow: #000 2px 1px 10px;
           box-shadow: #000 2px 1px 10px;
   margin: 10px;
+  cursor: pointer;
 }
 .button:hover {
   background: #00b208; /* Old browsers */ /* FF3.6-15 */
@@ -85,6 +86,20 @@
   background: -webkit-gradient(linear, left top, left bottom, from(#79dd27), to(#00b208));
   background: -o-linear-gradient(top, #79dd27 0%, #00b208 100%);
   background: linear-gradient(to bottom, #79dd27 0%, #00b208 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.button_red {
+  background: #c00; /* Old browsers */ /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #c00 0%, #cc8282 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#c00), to(#cc8282));
+  background: -o-linear-gradient(top, #c00 0%, #cc8282 100%);
+  background: linear-gradient(to bottom, #c00 0%, #cc8282 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.button_red:hover {
+  background: #c00; /* Old browsers */ /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #cc8282 0%, #c00 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#cc8282), to(#c00));
+  background: -o-linear-gradient(top, #cc8282 0%, #c00 100%);
+  background: linear-gradient(to bottom, #cc8282 0%, #c00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .first-start__title {
   font: 5.5vh 'Rounded', sans-serif;
@@ -509,4 +524,34 @@
   -webkit-background-size: contain;
           background-size: contain;
   background-repeat: no-repeat;
+}
+.card-answer {
+  display: block;
+  background: rgba(255,255,255,0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 8888;
+}
+.card-answer__card {
+  width: 41vw;
+  min-height: 51vh;
+  background-image: url("../img/green-card-4.png");
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+}
+.answer-buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3vh;
 }
