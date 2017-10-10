@@ -360,6 +360,46 @@
 .start {
   background-image: url("../img/start.png");
 }
+.dice {
+  width: 6vh;
+  height: 6vh;
+  display: block;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../img/dice.png");
+}
+.history {
+  position: absolute;
+  bottom: 6vh;
+  right: 0;
+}
+.history__button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.history__button.inactive {
+  background: #808080;
+  cursor: not-allowed;
+}
+.history__button.inactive .dice {
+  cursor: not-allowed;
+}
+.history__title {
+  font: 700 6vh 'Rounded', sans-serif;
+  margin-right: 1vh;
+}
 .player {
   position: absolute;
   width: 3vh;
@@ -412,4 +452,61 @@
   background-image: url("../img/player-8.png");
   bottom: 2vh;
   left: 8vh;
+}
+.statistic {
+  padding: 10px;
+  font: 700 2.5vh 'Rounded', sans-serif;
+  text-align: center;
+}
+.statistic__title {
+  font: 700 3.5vh 'Rounded', sans-serif;
+}
+.statistic__list {
+  list-style: none;
+  padding: 0 3.5vh;
+}
+.statistic__player {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.statistic__player_1 .statistic__icon {
+  background-image: url("../img/player-1.png");
+}
+.statistic__player_2 .statistic__icon {
+  background-image: url("../img/player-2.png");
+}
+.statistic__player_3 .statistic__icon {
+  background-image: url("../img/player-3.png");
+}
+.statistic__player_4 .statistic__icon {
+  background-image: url("../img/player-4.png");
+}
+.statistic__player_5 .statistic__icon {
+  background-image: url("../img/player-5.png");
+}
+.statistic__player_6 .statistic__icon {
+  background-image: url("../img/player-6.png");
+}
+.statistic__player_7 .statistic__icon {
+  background-image: url("../img/player-7.png");
+}
+.statistic__player_8 .statistic__icon {
+  background-image: url("../img/player-8.png");
+}
+.statistic__icon {
+  width: 2.2vh;
+  height: 4.7vh;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
 }
