@@ -227,25 +227,25 @@
 }
 
 .card {
-  background-size: contain
+  background-size: cover
   background-position center
   background-repeat no-repeat
   width: 60%
   height: 58%
-  transform rotate(4deg)
+//transform rotate(4deg)
   position: absolute
   display: block
   top: 27%
   left: 20%
   box-shadow black 2px 2px 10px
   z-index 7777
-  transition 2.5s
+  transition 1.5s
 
   &.active {
     transform: translate(-50%, -50%) rotate(0deg)
-    z-index 9999
-    width: 170%;
-    height: 165%;
+    z-index 8887
+    width: 41vw;
+    height: 51vh;
   }
 
   &_orange {
@@ -474,7 +474,7 @@
 }
 
 .card-answer {
-  display: block
+  display: none
   background: rgba(255, 255, 255, .6)
   position: absolute
   top: 0
@@ -484,8 +484,8 @@
   z-index: 8888
 
   &__card {
-    width: 41vw;
-    min-height: 51vh;
+    width: 47vw;
+    min-height: 58vh;
     background-image: url(../img/green-card-4.png)
     background-size contain
     background-repeat no-repeat;

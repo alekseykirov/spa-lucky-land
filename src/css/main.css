@@ -289,15 +289,12 @@
   right: 12px;
 }
 .card {
-  -webkit-background-size: contain;
-          background-size: contain;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 60%;
   height: 58%;
-  -webkit-transform: rotate(4deg);
-      -ms-transform: rotate(4deg);
-          transform: rotate(4deg);
   position: absolute;
   display: block;
   top: 27%;
@@ -305,17 +302,17 @@
   -webkit-box-shadow: #000 2px 2px 10px;
           box-shadow: #000 2px 2px 10px;
   z-index: 7777;
-  -webkit-transition: 2.5s;
-  -o-transition: 2.5s;
-  transition: 2.5s;
+  -webkit-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s;
 }
 .card.active {
   -webkit-transform: translate(-50%, -50%) rotate(0deg);
       -ms-transform: translate(-50%, -50%) rotate(0deg);
           transform: translate(-50%, -50%) rotate(0deg);
-  z-index: 9999;
-  width: 170%;
-  height: 165%;
+  z-index: 8887;
+  width: 41vw;
+  height: 51vh;
 }
 .card_orange {
   background-image: url("../img/card-orange.png");
@@ -526,7 +523,7 @@
   background-repeat: no-repeat;
 }
 .card-answer {
-  display: block;
+  display: none;
   background: rgba(255,255,255,0.6);
   position: absolute;
   top: 0;
@@ -536,8 +533,8 @@
   z-index: 8888;
 }
 .card-answer__card {
-  width: 41vw;
-  min-height: 51vh;
+  width: 47vw;
+  min-height: 58vh;
   background-image: url("../img/green-card-4.png");
   -webkit-background-size: contain;
           background-size: contain;
