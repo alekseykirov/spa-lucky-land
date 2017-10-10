@@ -15,12 +15,24 @@
   width: 20vh
   height: 20vh
   border-radius 50%
-  display: block
+  display: flex
+  z-index: 222
+  align-items center
+  flex-wrap wrap
+  justify-content center
+  align-content center
   background: white
   position absolute
   top: 50%
+  text-align: center
   right: 0
+  font: 700 3.5vh 'Rounded', sans-serif
+  color #E4181F
   transform: translate(50%, -50%)
+
+  .circle__top {
+    border-bottom 2px solid #E4181F
+  }
 }
 
 .row {
@@ -47,6 +59,7 @@
 }
 
 .category {
+  position: relative
   display: block
   width: 98%
   min-height: 48%
@@ -55,6 +68,43 @@
   margin: .5vh 0
   background-size cover
   background-repeat no-repeat;
+
+  &__title {
+    position: absolute
+    font: 700 3.6vh 'Rounded', sans-serif
+    color: #8E472F
+    width: 100%
+    text-align: center
+    margin-top 15px
+    text-shadow white 3px 1px 0
+  }
+
+  &__area {
+    position: absolute
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+    width: 62%
+    min-height: 62%
+    border-radius 10px
+    background: rgba(255,255,255, .6)
+  }
+
+  &__counter {
+    position: absolute
+    font: 700 5vh 'Rounded', sans-serif
+    color: #8E472F
+    text-shadow white 3px 1px 5px
+    bottom: 0
+
+    &_left {
+      left: 12px
+    }
+
+    &_right {
+      right: 12px
+    }
+  }
 }
 
 .item {
@@ -65,10 +115,6 @@
   box-sizing border-box
   background-size cover
   background-repeat no-repeat;
-
-  &:hover {
-    border 1px solid grey
-  }
 }
 
 .orange {
@@ -84,7 +130,7 @@
 }
 
 .yellow {
-  background-image:  url(../img/yellow.png)
+  background-image: url(../img/yellow.png)
 }
 
 .blue {
