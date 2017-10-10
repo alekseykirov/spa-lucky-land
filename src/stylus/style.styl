@@ -34,6 +34,14 @@
     left: 50%
     transform translate(-50%, -50%)
   }
+
+  &__step-1 {
+    display: none
+  }
+
+  &__step-2 {
+    display: none
+  }
 }
 
 .logo {
@@ -203,18 +211,73 @@
   }
 }
 
+.card {
+  background-size: contain
+  background-position center
+  background-repeat no-repeat
+  width: 60%
+  height: 58%
+  transform rotate(4deg)
+  position: absolute
+  display: block
+  top: 27%
+  left: 20%
+  box-shadow black 2px 2px 10px
+  z-index 7777
+  transition 2.5s
+
+  &.active {
+    transform: translate(-50%, -50%) rotate(0deg)
+    z-index 9999
+    width: 170%;
+    height: 165%;
+  }
+
+  &_orange {
+    background-image: url('../img/card-orange.png')
+
+    &.active {
+      top: 100%
+      left: 100%
+    }
+  }
+
+  &_green {
+    background-image: url('../img/card-green.png')
+
+    &.active {
+      top: 100%
+      left: 0
+    }
+  }
+
+  &_blue {
+    background-image: url('../img/card-blue.png')
+
+    &.active {
+      top: 0
+      left: 100%
+    }
+  }
+
+  &_yellow {
+    background-image: url('../img/card-yellow.png')
+
+    &.active {
+      top: 0
+      left: 0
+    }
+  }
+}
+
 .item {
   height: 13vh
   min-width: 13vh
   border-radius 7px
   margin .5vh
   box-sizing border-box
-  background-size cover
+  background-size contain
   background-repeat no-repeat;
-
-  &:hover {
-    border 1px solid
-  }
 }
 
 .orange {
@@ -239,4 +302,62 @@
 
 .start {
   background-image: url(../img/start.png)
+}
+
+.player {
+  position: absolute
+  width: 3vh
+  height: 5.5vh
+  box-sizing border-box
+  background-size contain
+  background-repeat no-repeat;
+  transition 1s
+
+  &_1 {
+    background-image: url(../img/player-1.png)
+    bottom: 6vh
+    left: 2vh
+  }
+
+  &_2 {
+    background-image: url(../img/player-2.png)
+    bottom: 6vh
+    left: 4vh
+  }
+
+  &_3 {
+    background-image: url(../img/player-3.png)
+    bottom: 6vh
+    left: 6vh
+  }
+
+  &_4 {
+    background-image: url(../img/player-4.png)
+    bottom: 6vh
+    left: 8vh
+  }
+
+  &_5 {
+    background-image: url(../img/player-5.png)
+    bottom: 2vh
+    left: 2vh
+  }
+
+  &_6 {
+    background-image: url(../img/player-6.png)
+    bottom: 2vh
+    left: 4vh
+  }
+
+  &_7 {
+    background-image: url(../img/player-7.png)
+    bottom: 2vh
+    left: 6vh
+  }
+
+  &_8 {
+    background-image: url(../img/player-8.png)
+    bottom: 2vh
+    left: 8vh
+  }
 }

@@ -48,6 +48,12 @@
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+.first-start__step-1 {
+  display: none;
+}
+.first-start__step-2 {
+  display: none;
+}
 .logo {
   position: absolute;
   top: 50%;
@@ -267,6 +273,63 @@
 .category__counter_right {
   right: 12px;
 }
+.card {
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 60%;
+  height: 58%;
+  -webkit-transform: rotate(4deg);
+      -ms-transform: rotate(4deg);
+          transform: rotate(4deg);
+  position: absolute;
+  display: block;
+  top: 27%;
+  left: 20%;
+  -webkit-box-shadow: #000 2px 2px 10px;
+          box-shadow: #000 2px 2px 10px;
+  z-index: 7777;
+  -webkit-transition: 2.5s;
+  -o-transition: 2.5s;
+  transition: 2.5s;
+}
+.card.active {
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+      -ms-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+  z-index: 9999;
+  width: 170%;
+  height: 165%;
+}
+.card_orange {
+  background-image: url("../img/card-orange.png");
+}
+.card_orange.active {
+  top: 100%;
+  left: 100%;
+}
+.card_green {
+  background-image: url("../img/card-green.png");
+}
+.card_green.active {
+  top: 100%;
+  left: 0;
+}
+.card_blue {
+  background-image: url("../img/card-blue.png");
+}
+.card_blue.active {
+  top: 0;
+  left: 100%;
+}
+.card_yellow {
+  background-image: url("../img/card-yellow.png");
+}
+.card_yellow.active {
+  top: 0;
+  left: 0;
+}
 .item {
   height: 13vh;
   min-width: 13vh;
@@ -275,12 +338,9 @@
   margin: 0.5vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-background-size: cover;
-          background-size: cover;
+  -webkit-background-size: contain;
+          background-size: contain;
   background-repeat: no-repeat;
-}
-.item:hover {
-  border: 1px solid;
 }
 .orange {
   background-image: url("../img/orange.png");
@@ -299,4 +359,57 @@
 }
 .start {
   background-image: url("../img/start.png");
+}
+.player {
+  position: absolute;
+  width: 3vh;
+  height: 5.5vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+.player_1 {
+  background-image: url("../img/player-1.png");
+  bottom: 6vh;
+  left: 2vh;
+}
+.player_2 {
+  background-image: url("../img/player-2.png");
+  bottom: 6vh;
+  left: 4vh;
+}
+.player_3 {
+  background-image: url("../img/player-3.png");
+  bottom: 6vh;
+  left: 6vh;
+}
+.player_4 {
+  background-image: url("../img/player-4.png");
+  bottom: 6vh;
+  left: 8vh;
+}
+.player_5 {
+  background-image: url("../img/player-5.png");
+  bottom: 2vh;
+  left: 2vh;
+}
+.player_6 {
+  background-image: url("../img/player-6.png");
+  bottom: 2vh;
+  left: 4vh;
+}
+.player_7 {
+  background-image: url("../img/player-7.png");
+  bottom: 2vh;
+  left: 6vh;
+}
+.player_8 {
+  background-image: url("../img/player-8.png");
+  bottom: 2vh;
+  left: 8vh;
 }
