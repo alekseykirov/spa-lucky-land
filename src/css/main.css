@@ -20,6 +20,119 @@
   display: -ms-flexbox;
   display: flex;
 }
+.preloader {
+  display: block;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.first-start {
+  display: block;
+  background: rgba(255,255,255,0.91);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 8888;
+}
+.first-start__nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60vw;
+}
+.button {
+  padding: 10px 20px;
+  color: #fff;
+  background: #00b208; /* Old browsers */ /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #00b208 0%, #79dd27 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#00b208), to(#79dd27));
+  background: -o-linear-gradient(top, #00b208 0%, #79dd27 100%);
+  background: linear-gradient(to bottom, #00b208 0%, #79dd27 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  text-decoration: none;
+  font: 700 4vh 'Rounded', sans-serif;
+  -webkit-border-radius: 19px;
+          border-radius: 19px;
+  -webkit-box-shadow: #000 2px 1px 10px;
+          box-shadow: #000 2px 1px 10px;
+  margin: 10px;
+}
+.button:hover {
+  background: #00b208; /* Old browsers */ /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #79dd27 0%, #00b208 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#79dd27), to(#00b208));
+  background: -o-linear-gradient(top, #79dd27 0%, #00b208 100%);
+  background: linear-gradient(to bottom, #79dd27 0%, #00b208 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.first-start__title {
+  font: 5.5vh 'Rounded', sans-serif;
+  text-align: center;
+  text-shadow: #000 1px 1px 3px;
+}
+.player-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.player-item {
+  font: 700 4vh 'Rounded', sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  background: #00b208; /* Old browsers */ /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #00b208 0%, #79dd27 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#00b208), to(#79dd27));
+  background: -o-linear-gradient(top, #00b208 0%, #79dd27 100%);
+  background: linear-gradient(to bottom, #00b208 0%, #79dd27 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  margin: 10px;
+  -webkit-box-shadow: #000 2px 1px 10px;
+          box-shadow: #000 2px 1px 10px;
+  cursor: pointer;
+}
+.player-item:hover {
+  background: #00b208; /* Old browsers */ /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #79dd27 0%, #00b208 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#79dd27), to(#00b208));
+  background: -o-linear-gradient(top, #79dd27 0%, #00b208 100%);
+  background: linear-gradient(to bottom, #79dd27 0%, #00b208 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
 .board-left {
   position: relative;
 }
@@ -165,6 +278,9 @@
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
+}
+.item:hover {
+  border: 1px solid;
 }
 .orange {
   background-image: url("../img/orange.png");

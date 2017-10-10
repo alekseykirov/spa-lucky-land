@@ -7,6 +7,102 @@
   display: flex
 }
 
+.preloader {
+  display: block
+  background: white
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 9999
+}
+
+.first-start {
+  display: block
+  background: rgba(255, 255, 255, .91)
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 8888
+
+  &__nav {
+    position: absolute
+    top: 50%
+    left: 50%
+    transform translate(-50%, -50%)
+  }
+}
+
+.logo {
+  position: absolute
+  top: 50%
+  left: 50%
+  transform translate(-50%, -50%)
+  width: 60vw
+}
+
+.button {
+  padding: 10px 20px
+  color: white
+  background: rgb(0, 178, 8); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(0, 178, 8, 1) 0%, rgba(121, 221, 39, 1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 178, 8, 1) 0%, rgba(121, 221, 39, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 178, 8, 1) 0%, rgba(121, 221, 39, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  text-decoration: none
+  font: 700 4vh 'Rounded', sans-serif
+  border-radius 19px
+  box-shadow black 2px 1px 10px
+  margin: 10px
+
+  &:hover {
+    background: rgb(0, 178, 8); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(121, 221, 39, 1) 0%, rgba(0, 178, 8, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(121, 221, 39, 1) 0%, rgba(0, 178, 8, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(121, 221, 39, 1) 0%, rgba(0, 178, 8, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+}
+
+.first-start__title {
+  font: 5.5vh 'Rounded', sans-serif
+  text-align: center
+  text-shadow black 1px 1px 3px
+}
+
+.player-list {
+  list-style none
+  display: flex
+  padding: 0
+  justify-content: center
+}
+
+.player-item {
+  font: 700 4vh 'Rounded', sans-serif
+  display: flex
+  justify-content: center
+  align-items center
+  color: white
+  width 70px
+  height: 70px
+  background: rgb(0, 178, 8); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(0, 178, 8, 1) 0%, rgba(121, 221, 39, 1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 178, 8, 1) 0%, rgba(121, 221, 39, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 178, 8, 1) 0%, rgba(121, 221, 39, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-radius 50%
+  margin: 10px
+  box-shadow black 2px 1px 10px
+  cursor pointer
+
+  &:hover {
+    background: rgb(0, 178, 8); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(121, 221, 39, 1) 0%, rgba(0, 178, 8, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(121, 221, 39, 1) 0%, rgba(0, 178, 8, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(121, 221, 39, 1) 0%, rgba(0, 178, 8, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+}
+
 .board-left {
   position: relative
 }
@@ -87,7 +183,7 @@
     width: 62%
     min-height: 62%
     border-radius 10px
-    background: rgba(255,255,255, .6)
+    background: rgba(255, 255, 255, .6)
   }
 
   &__counter {
@@ -115,6 +211,10 @@
   box-sizing border-box
   background-size cover
   background-repeat no-repeat;
+
+  &:hover {
+    border 1px solid
+  }
 }
 
 .orange {

@@ -26,5 +26,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.6.0",
     "gulp-uglifyjs": "^0.6.2"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
   }
 }
