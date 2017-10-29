@@ -20,6 +20,9 @@
   display: -ms-flexbox;
   display: flex;
 }
+.hidden {
+  display: none;
+}
 .preloader {
   display: block;
   background: #fff;
@@ -31,7 +34,6 @@
   z-index: 9999;
 }
 .first-start {
-  display: block;
   background: rgba(255,255,255,0.91);
   position: absolute;
   top: 0;
@@ -47,12 +49,6 @@
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-.first-start__step-1 {
-  display: none;
-}
-.first-start__step-2 {
-  display: none;
 }
 .logo {
   position: absolute;
@@ -411,6 +407,7 @@
 .history__title {
   font: 700 6vh 'Rounded', sans-serif;
   margin-right: 1vh;
+  width: 4vh;
 }
 .player {
   position: absolute;

@@ -7,6 +7,10 @@
   display: flex
 }
 
+.hidden {
+  display: none
+}
+
 .preloader {
   display: block
   background: white
@@ -19,7 +23,7 @@
 }
 
 .first-start {
-  display: block
+  //display: block
   background: rgba(255, 255, 255, .91)
   position: absolute
   top: 0
@@ -33,14 +37,6 @@
     top: 50%
     left: 50%
     transform translate(-50%, -50%)
-  }
-
-  &__step-1 {
-    display: none
-  }
-
-  &__step-2 {
-    display: none
   }
 }
 
@@ -352,6 +348,7 @@
   &__title {
     font: 700 6vh 'Rounded', sans-serif
     margin-right 1vh
+    width: 4vh
   }
 }
 

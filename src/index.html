@@ -2,8 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Lucky Land</title>
+    <title>Clean and Green - Lucky Land</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
     <script src="js/min.js"></script>
     <script src="js/main.js"></script>
 </head>
@@ -12,26 +13,26 @@
     <div class="preloader js-preloader">
         <img src="img/logo.png" class='logo' alt="">
     </div>
-    <div class="first-start">
-        <div class="first-start__step-1">
+    <div class="first-start hidden"> <!--TODO УБРАТЬ HIDDEN-->
+        <div class="first-start__step first-start__step_1">
             <div class="first-start__nav">
-                <a href="#" class="button">Start</a>
-                <a href="#" class="button">Rules</a>
+                <a href="#" class="button js-button-start">Start</a>
+                <a href="#" class="button js-button-rules">Rules</a>
             </div>
         </div>
-        <div class="first-start__step-2">
+        <div class="first-start__step first-start__step_2 hidden">
             <div class="first-start__nav">
                 <div class="first-start__title">
                     Choose the number of players
                 </div>
                 <ul class="player-list">
-                    <li class="player-item">2</li>
-                    <li class="player-item">3</li>
-                    <li class="player-item">4</li>
-                    <li class="player-item">5</li>
-                    <li class="player-item">6</li>
-                    <li class="player-item">7</li>
-                    <li class="player-item">8</li>
+                    <li class="player-item js-button-choose">2</li>
+                    <li class="player-item js-button-choose">3</li>
+                    <li class="player-item js-button-choose">4</li>
+                    <li class="player-item js-button-choose">5</li>
+                    <li class="player-item js-button-choose">6</li>
+                    <li class="player-item js-button-choose">7</li>
+                    <li class="player-item js-button-choose">8</li>
                 </ul>
             </div>
         </div>
@@ -41,7 +42,7 @@
             <div class="card-answer__card"></div>
             <div class="answer-buttons">
                 <div class="button">Right!</div>
-                <div class="button button_red">Not right!</div>
+                <div class="button button_red">Wrong!</div>
             </div>
         </div>
     </div>
@@ -80,13 +81,13 @@
                             <div class="card card_orange"></div>
                             <div class="category__title">Animals, birds and insects</div>
                             <div class="category__area"></div>
-                            <div class="category__counter category__counter_left">2</div>
+                            <div class="category__counter category__counter_left">10</div>
                         </div>
                         <div class="category blue">
                             <div class="card card_blue"></div>
                             <div class="category__title">Water and air</div>
                             <div class="category__area"></div>
-                            <div class="category__counter category__counter_left">7</div>
+                            <div class="category__counter category__counter_left">10</div>
                         </div>
                     </div>
                 </div>
@@ -102,36 +103,36 @@
                 <div class="history">
                     <div class="statistic">
                         <div class="statistic__title">
-                            Statistic
+                            Score
                         </div>
                         <ul class="statistic__list">
                             <li class="statistic__player statistic__player_1">
                                 <div class="statistic__icon"></div>
-                                <div class="statistic__amount">100</div>
+                                <div class="statistic__amount">0</div>
                             </li>
                             <li class="statistic__player statistic__player_2">
                                 <div class="statistic__icon"></div>
-                                <div class="statistic__amount">35</div>
+                                <div class="statistic__amount">0</div>
                             </li>
                             <li class="statistic__player statistic__player_3">
                                 <div class="statistic__icon"></div>
-                                <div class="statistic__amount">5</div>
+                                <div class="statistic__amount">0</div>
                             </li>
                             <li class="statistic__player statistic__player_4">
                                 <div class="statistic__icon"></div>
-                                <div class="statistic__amount">25</div>
+                                <div class="statistic__amount">0</div>
                             </li>
                             <li class="statistic__player statistic__player_5">
                                 <div class="statistic__icon"></div>
-                                <div class="statistic__amount">45</div>
+                                <div class="statistic__amount">0</div>
                             </li>
                             <li class="statistic__player statistic__player_6">
                                 <div class="statistic__icon"></div>
-                                <div class="statistic__amount">20</div>
+                                <div class="statistic__amount">0</div>
                             </li>
                             <li class="statistic__player statistic__player_7">
                                 <div class="statistic__icon"></div>
-                                <div class="statistic__amount">25</div>
+                                <div class="statistic__amount">0</div>
                             </li>
                             <li class="statistic__player statistic__player_8">
                                 <div class="statistic__icon"></div>
@@ -140,8 +141,8 @@
                         </ul>
                     </div>
                     <div class="button history__button"> <!--inactive-->
-                        <div class="history__title">5</div>
-                        <a href="#" class="dice"></a>
+                        <div class="history__title">X</div>
+                        <a href="#" class="dice js-dice"></a>
                     </div>
                 </div>
                 <div class="row">
@@ -157,7 +158,7 @@
                             <div class="card card_green"></div>
                             <div class="category__title">Plants and Forests</div>
                             <div class="category__area"></div>
-                            <div class="category__counter category__counter_right">1</div>
+                            <div class="category__counter category__counter_right">10</div>
                         </div>
                         <div class="category yellow">
                             <div class="card card_yellow"></div>
@@ -182,6 +183,7 @@
                     <div class="item blue"></div>
                 </div>
             </div>
+            <div class="js-distance" style="width: 14vh; display: none"></div>
         </div>
     </div>
 </div>
