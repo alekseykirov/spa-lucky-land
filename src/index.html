@@ -13,7 +13,7 @@
     <div class="preloader js-preloader">
         <img src="img/logo.png" class='logo' alt="">
     </div>
-    <div class="first-start hidden"> <!--TODO УБРАТЬ HIDDEN-->
+    <div class="first-start">
         <div class="first-start__step first-start__step_1">
             <div class="first-start__nav">
                 <a href="#" class="button js-button-start">Start</a>
@@ -26,13 +26,13 @@
                     Choose the number of players
                 </div>
                 <ul class="player-list">
-                    <li class="player-item js-button-choose">2</li>
-                    <li class="player-item js-button-choose">3</li>
-                    <li class="player-item js-button-choose">4</li>
-                    <li class="player-item js-button-choose">5</li>
-                    <li class="player-item js-button-choose">6</li>
-                    <li class="player-item js-button-choose">7</li>
-                    <li class="player-item js-button-choose">8</li>
+                    <li class="player-item js-button-choose" data-choose-number="2">2</li>
+                    <li class="player-item js-button-choose" data-choose-number="3">3</li>
+                    <li class="player-item js-button-choose" data-choose-number="4">4</li>
+                    <li class="player-item js-button-choose" data-choose-number="5">5</li>
+                    <li class="player-item js-button-choose" data-choose-number="6">6</li>
+                    <li class="player-item js-button-choose" data-choose-number="7">7</li>
+                    <li class="player-item js-button-choose" data-choose-number="8">8</li>
                 </ul>
             </div>
         </div>
@@ -41,22 +41,15 @@
         <div class="first-start__nav">
             <div class="card-answer__card"></div>
             <div class="answer-buttons">
-                <div class="button">Right!</div>
-                <div class="button button_red">Wrong!</div>
+                <div class="button js-right">Right!</div>
+                <div class="button button_red js-wrong">Wrong!</div>
             </div>
         </div>
     </div>
     <div class="main-content">
         <div class="board">
             <div class="board-left">
-                <div class="player player_1"></div>
-                <div class="player player_2"></div>
-                <div class="player player_3"></div>
-                <div class="player player_4"></div>
-                <div class="player player_5"></div>
-                <div class="player player_6"></div>
-                <div class="player player_7"></div>
-                <div class="player player_8"></div>
+                <div class="js-start-line"></div>
                 <div class="circle">
                     <span class="circle__top">You must</span><br>
                     <span class="circle__bottom">mustn`t</span>
@@ -81,13 +74,13 @@
                             <div class="card card_orange"></div>
                             <div class="category__title">Animals, birds and insects</div>
                             <div class="category__area"></div>
-                            <div class="category__counter category__counter_left">10</div>
+                            <div class="category__counter category__counter_left js-orange">10</div>
                         </div>
                         <div class="category blue">
                             <div class="card card_blue"></div>
                             <div class="category__title">Water and air</div>
                             <div class="category__area"></div>
-                            <div class="category__counter category__counter_left">10</div>
+                            <div class="category__counter category__counter_left js-blue">10</div>
                         </div>
                     </div>
                 </div>
@@ -100,50 +93,17 @@
                 </div>
             </div>
             <div class="board-right">
-                <div class="history">
+                <div class="score">
                     <div class="statistic">
                         <div class="statistic__title">
                             Score
                         </div>
-                        <ul class="statistic__list">
-                            <li class="statistic__player statistic__player_1">
-                                <div class="statistic__icon"></div>
-                                <div class="statistic__amount">0</div>
-                            </li>
-                            <li class="statistic__player statistic__player_2">
-                                <div class="statistic__icon"></div>
-                                <div class="statistic__amount">0</div>
-                            </li>
-                            <li class="statistic__player statistic__player_3">
-                                <div class="statistic__icon"></div>
-                                <div class="statistic__amount">0</div>
-                            </li>
-                            <li class="statistic__player statistic__player_4">
-                                <div class="statistic__icon"></div>
-                                <div class="statistic__amount">0</div>
-                            </li>
-                            <li class="statistic__player statistic__player_5">
-                                <div class="statistic__icon"></div>
-                                <div class="statistic__amount">0</div>
-                            </li>
-                            <li class="statistic__player statistic__player_6">
-                                <div class="statistic__icon"></div>
-                                <div class="statistic__amount">0</div>
-                            </li>
-                            <li class="statistic__player statistic__player_7">
-                                <div class="statistic__icon"></div>
-                                <div class="statistic__amount">0</div>
-                            </li>
-                            <li class="statistic__player statistic__player_8">
-                                <div class="statistic__icon"></div>
-                                <div class="statistic__amount">0</div>
-                            </li>
-                        </ul>
+                        <ul class="statistic__list"></ul>
                     </div>
-                    <div class="button history__button"> <!--inactive-->
-                        <div class="history__title">X</div>
-                        <a href="#" class="dice js-dice"></a>
-                    </div>
+                    <a href="#" class="button score__button js-btn-dice"> <!--inactive-->
+                        <div class="score__button-title js-title-dice">X</div>
+                        <div class="score__button-pic"></div>
+                    </a>
                 </div>
                 <div class="row">
                     <div class="item grey"></div>
@@ -158,13 +118,13 @@
                             <div class="card card_green"></div>
                             <div class="category__title">Plants and Forests</div>
                             <div class="category__area"></div>
-                            <div class="category__counter category__counter_right">10</div>
+                            <div class="category__counter category__counter_right js-green">10</div>
                         </div>
                         <div class="category yellow">
                             <div class="card card_yellow"></div>
                             <div class="category__title">Streets and houses</div>
                             <div class="category__area"></div>
-                            <div class="category__counter category__counter_right">10</div>
+                            <div class="category__counter category__counter_right js-yellow">10</div>
                         </div>
                     </div>
                     <div class="column column_right">
@@ -183,7 +143,6 @@
                     <div class="item blue"></div>
                 </div>
             </div>
-            <div class="js-distance" style="width: 14vh; display: none"></div>
         </div>
     </div>
 </div>

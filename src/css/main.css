@@ -368,7 +368,7 @@
 .start {
   background-image: url("../img/start.png");
 }
-.dice {
+.score__button-pic {
   width: 6vh;
   height: 6vh;
   display: block;
@@ -377,12 +377,12 @@
   background-repeat: no-repeat;
   background-image: url("../img/dice.png");
 }
-.history {
+.score {
   position: absolute;
   bottom: 6vh;
   right: 0;
 }
-.history__button {
+.score__button {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -397,14 +397,14 @@
           align-items: center;
   cursor: pointer;
 }
-.history__button.inactive {
+.score__button.inactive {
   background: #808080;
   cursor: not-allowed;
 }
-.history__button.inactive .dice {
+.score__button.inactive .score__button-pic {
   cursor: not-allowed;
 }
-.history__title {
+.score__button-title {
   font: 700 6vh 'Rounded', sans-serif;
   margin-right: 1vh;
   width: 4vh;
@@ -548,4 +548,10 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 3vh;
+}
+.player-number {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  line-height: 7vh;
 }
