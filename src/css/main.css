@@ -529,6 +529,9 @@
   right: 0;
   z-index: 8888;
 }
+.card-answer.active {
+  display: block;
+}
 .card-answer__card {
   width: 47vw;
   min-height: 58vh;

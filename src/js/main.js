@@ -6,47 +6,53 @@ $(window).on('load', function () {
 
 $(function () {
     window.playersArray = [];
-    var imagesArray = [
-        {id: 0, color: 'blue', number: 0, url: 'url("../img/blue/0.png")'},
-        {id: 1, color: 'blue', number: 1, url: 'url("../img/blue/1.png")'},
-        {id: 2, color: 'blue', number: 2, url: 'url("../img/blue/2.png")'},
-        {id: 3, color: 'blue', number: 3, url: 'url("../img/blue/3.png")'},
-        {id: 4, color: 'blue', number: 4, url: 'url("../img/blue/4.png")'},
-        {id: 5, color: 'blue', number: 5, url: 'url("../img/blue/5.png")'},
-        {id: 6, color: 'blue', number: 6, url: 'url("../img/blue/6.png")'},
-        {id: 7, color: 'blue', number: 7, url: 'url("../img/blue/7.png")'},
-        {id: 8, color: 'blue', number: 8, url: 'url("../img/blue/8.png")'},
-        {id: 9, color: 'blue', number: 9, url: 'url("../img/blue/9.png")'},
-        {id: 10, color: 'green', number: 0, url: 'url("../img/green/0.png")'},
-        {id: 11, color: 'green', number: 1, url: 'url("../img/green/1.png")'},
-        {id: 12, color: 'green', number: 2, url: 'url("../img/green/2.png")'},
-        {id: 13, color: 'green', number: 3, url: 'url("../img/green/3.png")'},
-        {id: 14, color: 'green', number: 4, url: 'url("../img/green/4.png")'},
-        {id: 15, color: 'green', number: 5, url: 'url("../img/green/5.png")'},
-        {id: 16, color: 'green', number: 6, url: 'url("../img/green/6.png")'},
-        {id: 17, color: 'green', number: 7, url: 'url("../img/green/7.png")'},
-        {id: 18, color: 'green', number: 8, url: 'url("../img/green/8.png")'},
-        {id: 19, color: 'green', number: 9, url: 'url("../img/green/9.png")'},
-        {id: 20, color: 'orange', number: 0, url: 'url("../img/orange/0.png")'},
-        {id: 21, color: 'orange', number: 1, url: 'url("../img/orange/1.png")'},
-        {id: 22, color: 'orange', number: 2, url: 'url("../img/orange/2.png")'},
-        {id: 23, color: 'orange', number: 3, url: 'url("../img/orange/3.png")'},
-        {id: 24, color: 'orange', number: 4, url: 'url("../img/orange/4.png")'},
-        {id: 25, color: 'orange', number: 5, url: 'url("../img/orange/5.png")'},
-        {id: 26, color: 'orange', number: 6, url: 'url("../img/orange/6.png")'},
-        {id: 27, color: 'orange', number: 7, url: 'url("../img/orange/7.png")'},
-        {id: 28, color: 'orange', number: 8, url: 'url("../img/orange/8.png")'},
-        {id: 29, color: 'orange', number: 9, url: 'url("../img/orange/9.png")'},
-        {id: 30, color: 'yellow', number: 0, url: 'url("../img/yellow/0.png")'},
-        {id: 31, color: 'yellow', number: 1, url: 'url("../img/yellow/1.png")'},
-        {id: 32, color: 'yellow', number: 2, url: 'url("../img/yellow/2.png")'},
-        {id: 33, color: 'yellow', number: 3, url: 'url("../img/yellow/3.png")'},
-        {id: 34, color: 'yellow', number: 4, url: 'url("../img/yellow/4.png")'},
-        {id: 35, color: 'yellow', number: 5, url: 'url("../img/yellow/5.png")'},
-        {id: 36, color: 'yellow', number: 6, url: 'url("../img/yellow/6.png")'},
-        {id: 37, color: 'yellow', number: 7, url: 'url("../img/yellow/7.png")'},
-        {id: 38, color: 'yellow', number: 8, url: 'url("../img/yellow/8.png")'},
-        {id: 39, color: 'yellow', number: 9, url: 'url("../img/yellow/9.png")'}
+    window.imagesArrayBlue = [
+        {id: 0, color: 'blue', url: 'url("../img/blue/0.png")'},
+        {id: 1, color: 'blue', url: 'url("../img/blue/1.png")'},
+        {id: 2, color: 'blue', url: 'url("../img/blue/2.png")'},
+        {id: 3, color: 'blue', url: 'url("../img/blue/3.png")'},
+        {id: 4, color: 'blue', url: 'url("../img/blue/4.png")'},
+        {id: 5, color: 'blue', url: 'url("../img/blue/5.png")'},
+        {id: 6, color: 'blue', url: 'url("../img/blue/6.png")'},
+        {id: 7, color: 'blue', url: 'url("../img/blue/7.png")'},
+        {id: 8, color: 'blue', url: 'url("../img/blue/8.png")'},
+        {id: 9, color: 'blue', url: 'url("../img/blue/9.png")'}
+    ];
+    window.imagesArrayGreen = [
+        {id: 0, color: 'green', url: 'url("../img/green/0.png")'},
+        {id: 1, color: 'green', url: 'url("../img/green/1.png")'},
+        {id: 2, color: 'green', url: 'url("../img/green/2.png")'},
+        {id: 3, color: 'green', url: 'url("../img/green/3.png")'},
+        {id: 4, color: 'green', url: 'url("../img/green/4.png")'},
+        {id: 5, color: 'green', url: 'url("../img/green/5.png")'},
+        {id: 6, color: 'green', url: 'url("../img/green/6.png")'},
+        {id: 7, color: 'green', url: 'url("../img/green/7.png")'},
+        {id: 8, color: 'green', url: 'url("../img/green/8.png")'},
+        {id: 9, color: 'green', url: 'url("../img/green/9.png")'}
+    ];
+    window.imagesArrayOrange = [
+        {id: 0, color: 'orange', url: 'url("../img/orange/0.png")'},
+        {id: 1, color: 'orange', url: 'url("../img/orange/1.png")'},
+        {id: 2, color: 'orange', url: 'url("../img/orange/2.png")'},
+        {id: 3, color: 'orange', url: 'url("../img/orange/3.png")'},
+        {id: 4, color: 'orange', url: 'url("../img/orange/4.png")'},
+        {id: 5, color: 'orange', url: 'url("../img/orange/5.png")'},
+        {id: 6, color: 'orange', url: 'url("../img/orange/6.png")'},
+        {id: 7, color: 'orange', url: 'url("../img/orange/7.png")'},
+        {id: 8, color: 'orange', url: 'url("../img/orange/8.png")'},
+        {id: 9, color: 'orange', url: 'url("../img/orange/9.png")'}
+    ];
+    window.imagesArrayYellow = [
+        {id: 0, color: 'yellow', url: 'url("../img/yellow/0.png")'},
+        {id: 1, color: 'yellow', url: 'url("../img/yellow/1.png")'},
+        {id: 2, color: 'yellow', url: 'url("../img/yellow/2.png")'},
+        {id: 3, color: 'yellow', url: 'url("../img/yellow/3.png")'},
+        {id: 4, color: 'yellow', url: 'url("../img/yellow/4.png")'},
+        {id: 5, color: 'yellow', url: 'url("../img/yellow/5.png")'},
+        {id: 6, color: 'yellow', url: 'url("../img/yellow/6.png")'},
+        {id: 7, color: 'yellow', url: 'url("../img/yellow/7.png")'},
+        {id: 8, color: 'yellow', url: 'url("../img/yellow/8.png")'},
+        {id: 9, color: 'yellow', url: 'url("../img/yellow/9.png")'}
     ];
     var positionArray = [
         {position: 0, x: 1, y: 1, bottom: 6, left: 2, color: 'grey'},
@@ -199,6 +205,7 @@ $(function () {
         {position: 147, x: 4, y: 1, bottom: 6, left: 44, color: 'blue'}
     ];
 
+
     // Шаг 1. Нажимаем старт - переходит у выбору игроков
     $('.js-button-start').on('click', function () {
         $(this).closest('.first-start__step').addClass('hidden');
@@ -220,7 +227,7 @@ $(function () {
         window.playersArray[0].activity = 'active';
 
         for (var i = 0; i < +numberOfPlayers; i++) {
-            var templateScore = '<li class="statistic__player statistic__player_' + window.playersArray[i].id + '">' +
+            var templateScore = '<li class="statistic__player statistic__player_' + window.playersArray[i].id + '" data-statistic-id="' + window.playersArray[i].id + '">' +
                 '<div class="statistic__icon"></div>' +
                 '<div class="statistic__amount">' + window.playersArray[i].score + '</div>' +
                 '</li>';
@@ -238,16 +245,22 @@ $(function () {
         $('.js-btn-dice').closest('.button').removeClass('inactive');
         $('.card-answer').removeClass('active');
         $('.card').removeClass('active');
+        checkTheNumberOfCards();
     });
 
     $('.js-right').on('click', function () {
         $('.js-btn-dice').closest('.button').removeClass('inactive');
-        var num = $('.player.active').attr('data-player');
-        var search = '.statistic__player_' + num;
-        var number = $(search).find('.statistic__amount').text();
-        $(search).find('.statistic__amount').empty().text(+number + 5);
+        var player = $(this).attr('data-player-active');
+        for (var i = 0; i < window.playersArray.length; i++) {
+            if (window.playersArray[i].id == player) {
+                window.playersArray[i].score += 5;
+                $('.statistic__player_' + player).find('.statistic__amount').text(window.playersArray[i].score);
+            }
+        }
+
         $('.card-answer').removeClass('active');
         $('.card').removeClass('active');
+        checkTheNumberOfCards()
     });
 
     $('.js-btn-dice').bind('click', function (e) {
@@ -300,6 +313,7 @@ $(function () {
                         'bottom': positionArray[window.playersArray[j].position].bottom + y + 'vh'
                     }
                 );
+                $('.js-right').attr('data-player-active', window.playersArray[j].id);
                 window.playersArray[j].activity = 'inactive';
                 if (window.playersArray.length == (next)) {
                     window.playersArray[0].activity = 'active';
@@ -314,67 +328,68 @@ $(function () {
             var id = window.playersArray[k].id;
             $('.player[data-player="' + id + '"]').attr('data-activity', window.playersArray[k].activity)
         }
-        $(this).unbind();
     });
 
+
     function showCurrentCart(currentColor, position) {
-        var rand = Math.floor(1 + Math.random() * 8);
-        for (var i = 0; i < imagesArray.length; i++) {
-            if (imagesArray[i].color == currentColor) {
-                // console.log(imagesArray[i])
-                // $('.card-answer__card').css({'background-image': imagesArray[i + 1].url});
-                // imagesArray.splice(i, 1);
-                // showNumberCard(imagesArray);
-            }
+        switch (currentColor) {
+            case 'blue':
+                spliceArray(imagesArrayBlue);
+                break;
+            case 'green':
+                spliceArray(imagesArrayGreen);
+                break;
+            case 'orange':
+                spliceArray(imagesArrayOrange);
+                break;
+            case 'yellow':
+                spliceArray(imagesArrayYellow);
+                break;
         }
+        showNumberCard();
 
         $('.card').removeClass('active');
         var colorCard = '.card_' + currentColor;
         setTimeout(function () {
             $(colorCard).addClass('active');
             if (positionArray[position].color != 'grey') {
-                setTimeout(function() {
+                setTimeout(function () {
                     $('.card-answer').addClass('active');
                 }, 1500);
+            }
+            if (positionArray[position].color == 'grey') {
+                $('.js-btn-dice').closest('.button').removeClass('inactive');
             }
         }, 1500);
     }
 
-    function showNumberCard(arr) {
-        // console.log(arr);
-
-        var arrOrange = [];
-        for (var k in arr) {
-            if (arr[k].color == 'orange') {
-                arrOrange.push(arr[k].color)
-            }
-        }
-        var arrBlue = [];
-        for (var j in arr) {
-            if (arr[j].color == 'blue') {
-                arrBlue.push(arr[j].color)
-            }
-        }
-        var arrGreen = [];
-        for (var i in arr) {
-            if (arr[i].color == 'green') {
-                arrGreen.push(arr[i].color)
-            }
-        }
-        var arrYellow = [];
-        for (var key in arr) {
-            if (arr[key].color == 'yellow') {
-                arrYellow.push(arr[key].color)
-            }
-        }
-        $('.js-yellow').empty().text(arrYellow.length);
-        $('.js-blue').empty().text(arrBlue.length);
-        $('.js-green').empty().text(arrGreen.length);
-        $('.js-orange').empty().text(arrOrange.length);
-
+    function showNumberCard() {
+        $('.js-yellow').empty().text(window.imagesArrayYellow.length);
+        $('.js-blue').empty().text(window.imagesArrayBlue.length);
+        $('.js-green').empty().text(window.imagesArrayGreen.length);
+        $('.js-orange').empty().text(window.imagesArrayOrange.length);
     }
 
     function getRandomNumber() {
         return Math.floor(1 + Math.random() * 6);
+    }
+
+    function spliceArray(array) {
+        var rand = Math.floor(Math.random() * array.length);
+        $('.card-answer__card').css({'background-image': array[rand].url});
+        array.splice(rand, 1);
+    }
+
+    function checkTheNumberOfCards() {
+        if (window.imagesArrayBlue.length == 0 ||
+            window.imagesArrayGreen.length == 0 ||
+            window.imagesArrayOrange.length == 0 ||
+            window.imagesArrayYellow.length == 0) {
+            showWinner();
+        }
+    }
+
+    function showWinner() {
+        console.log('Тут будет победитель')
     }
 });
