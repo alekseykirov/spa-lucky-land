@@ -23,8 +23,7 @@
 }
 
 .first-start {
-  //display: block
-  background: rgba(255, 255, 255, .91)
+  background: rgba(255, 255, 255, .93)
   position: absolute
   top: 0
   bottom: 0
@@ -38,6 +37,72 @@
     left: 50%
     transform translate(-50%, -50%)
   }
+
+  &__players {
+    text-align: center
+  }
+
+  &__player-title {
+    font: 3vh 'Rounded', sans-serif
+    font-weight 900
+    vertical-align: middle
+  }
+
+  &__player {
+    margin: 10px 0;
+
+    & input {
+      height: 3vh
+      margin-left 20px
+      vertical-align: middle
+      border 1px solid black
+      box-shadow 1px 1px 6px grey
+      border-radius: 5px
+      padding: 10px
+      font-size: 3vh
+      outline none
+      text-align: center
+    }
+
+    &-button {
+      margin-top 25px
+      text-align: right
+    }
+  }
+}
+
+.end {
+  background: rgba(255, 255, 255, .91)
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 9999
+
+  &__wrapper {
+    position: absolute
+    top: 50%
+    left: 50%
+    transform translate(-50%, -50%)
+  }
+
+  &__title {
+    font: 5.5vh 'Rounded', sans-serif
+    text-align: center
+    text-shadow black 1px 1px 3px
+    margin-bottom 2vh
+  }
+
+  &__winners {
+    text-align: center
+  }
+}
+
+.winner {
+  display: block
+  font: 4.5vh 'Rounded', sans-serif
+  font-weight 900
 }
 
 .logo {
@@ -228,7 +293,6 @@
   background-repeat no-repeat
   width: 60%
   height: 58%
-//transform rotate(4deg)
   position: absolute
   display: block
   top: 27%
@@ -315,7 +379,7 @@
   background-image: url(../img/start.png)
 }
 
-.dice {
+.score__button-pic {
   width: 6vh
   height: 6vh
   display: block
@@ -324,7 +388,7 @@
   background-image: url('../img/dice.png')
 }
 
-.history {
+.score {
   position: absolute
   bottom: 6vh
   right: 0
@@ -341,11 +405,11 @@
     cursor not-allowed
   }
 
-  &__button.inactive .dice {
+  &__button.inactive .score__button-pic {
     cursor not-allowed
   }
 
-  &__title {
+  &__button-title {
     font: 700 6vh 'Rounded', sans-serif
     margin-right 1vh
     width: 4vh
@@ -424,6 +488,17 @@
     padding: 0 3.5vh
   }
 
+  &__name {
+    margin: 0 10px
+    display: inline-block
+    vertical-align: middle
+  }
+
+  &__icon {
+    display: inline-block
+    vertical-align: middle
+  }
+
   &__player {
     display: flex
     justify-content space-between
@@ -481,12 +556,16 @@
   z-index: 8888
 
   &__card {
-    width: 47vw;
-    min-height: 58vh;
+    width: 59vw;
+    min-height: 66vh;
     background-image: url(../img/green-card-4.png)
     background-size contain
     background-repeat no-repeat;
     display: block
+  }
+
+  &.active {
+    display: block;
   }
 }
 

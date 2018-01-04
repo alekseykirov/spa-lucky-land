@@ -17,7 +17,7 @@
         <div class="first-start__step first-start__step_1">
             <div class="first-start__nav">
                 <a href="#" class="button js-button-start">Start</a>
-                <a href="#" class="button js-button-rules">Rules</a>
+                <!--<a href="#" class="button js-button-rules">Rules</a>-->
             </div>
         </div>
         <div class="first-start__step first-start__step_2 hidden">
@@ -34,6 +34,17 @@
                     <li class="player-item js-button-choose" data-choose-number="7">7</li>
                     <li class="player-item js-button-choose" data-choose-number="8">8</li>
                 </ul>
+            </div>
+        </div>
+        <div class="first-start__step first-start__step_3 hidden">
+            <div class="first-start__nav">
+                <div class="first-start__title">
+                    Enter your names
+                </div>
+                <div class="first-start__players"></div>
+                <div class="first-start__player-button">
+                    <a href="#" class="button js-go">Go!</a>
+                </div>
             </div>
         </div>
     </div>
@@ -100,7 +111,7 @@
                         </div>
                         <ul class="statistic__list"></ul>
                     </div>
-                    <a href="#" class="button score__button js-btn-dice"> <!--inactive-->
+                    <a href="#" class="button score__button js-btn-dice">
                         <div class="score__button-title js-title-dice">X</div>
                         <div class="score__button-pic"></div>
                     </a>
@@ -143,6 +154,14 @@
                     <div class="item blue"></div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="end hidden">
+        <div class="end__wrapper">
+            <div class="end__title">
+                WINNERS:
+            </div>
+            <div class="end__winners"></div>
         </div>
     </div>
 </div>

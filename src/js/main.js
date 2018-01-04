@@ -1,7 +1,7 @@
 $(window).on('load', function () {
     setTimeout(function () {
         $('.js-preloader').fadeOut();
-    }, 0);
+    }, 3000);
 });
 
 $(function () {
@@ -202,7 +202,50 @@ $(function () {
         {position: 144, x: 7, y: 1, bottom: 6, left: 86, color: 'green'},
         {position: 145, x: 6, y: 1, bottom: 6, left: 72, color: 'yellow'},
         {position: 146, x: 5, y: 1, bottom: 6, left: 58, color: 'grey'},
-        {position: 147, x: 4, y: 1, bottom: 6, left: 44, color: 'blue'}
+        {position: 147, x: 4, y: 1, bottom: 6, left: 44, color: 'blue'},
+        {position: 148, x: 3, y: 1, bottom: 6, left: 30, color: 'orange'},
+        {position: 149, x: 2, y: 1, bottom: 6, left: 16, color: 'green'},
+        {position: 150, x: 1, y: 1, bottom: 6, left: 2, color: 'grey'},
+        {position: 151, x: 1, y: 2, bottom: 20, left: 2, color: 'orange'},
+        {position: 152, x: 1, y: 3, bottom: 34, left: 2, color: 'grey'},
+        {position: 153, x: 1, y: 4, bottom: 48, left: 2, color: 'green'},
+        {position: 154, x: 1, y: 5, bottom: 62, left: 2, color: 'yellow'},
+        {position: 155, x: 1, y: 6, bottom: 76, left: 2, color: 'blue'},
+        {position: 156, x: 1, y: 7, bottom: 90, left: 2, color: 'orange'},
+        {position: 157, x: 2, y: 7, bottom: 90, left: 16, color: 'grey'},
+        {position: 158, x: 3, y: 7, bottom: 90, left: 30, color: 'green'},
+        {position: 159, x: 4, y: 7, bottom: 90, left: 44, color: 'yellow'},
+        {position: 160, x: 5, y: 7, bottom: 90, left: 58, color: 'blue'},
+        {position: 161, x: 6, y: 7, bottom: 90, left: 72, color: 'grey'},
+        {position: 162, x: 7, y: 7, bottom: 90, left: 86, color: 'orange'},
+        {position: 163, x: 8, y: 7, bottom: 90, left: 100, color: 'green'},
+        {position: 164, x: 9, y: 7, bottom: 90, left: 114, color: 'yellow'},
+        {position: 165, x: 10, y: 7, bottom: 90, left: 128, color: 'grey'},
+        {position: 166, x: 10, y: 6, bottom: 76, left: 128, color: 'blue'},
+        {position: 167, x: 10, y: 5, bottom: 62, left: 128, color: 'orange'},
+        {position: 168, x: 10, y: 4, bottom: 48, left: 128, color: 'green'},
+        {position: 169, x: 10, y: 3, bottom: 34, left: 128, color: 'yellow'},
+        {position: 170, x: 10, y: 2, bottom: 20, left: 128, color: 'grey'},
+        {position: 171, x: 10, y: 1, bottom: 6, left: 128, color: 'blue'},
+        {position: 172, x: 9, y: 1, bottom: 6, left: 114, color: 'orange'},
+        {position: 173, x: 8, y: 1, bottom: 6, left: 100, color: 'grey'},
+        {position: 174, x: 7, y: 1, bottom: 6, left: 86, color: 'green'},
+        {position: 175, x: 6, y: 1, bottom: 6, left: 72, color: 'yellow'},
+        {position: 176, x: 5, y: 1, bottom: 6, left: 58, color: 'grey'},
+        {position: 177, x: 4, y: 1, bottom: 6, left: 44, color: 'blue'},
+        {position: 178, x: 3, y: 1, bottom: 6, left: 30, color: 'orange'},
+        {position: 179, x: 2, y: 1, bottom: 6, left: 16, color: 'green'},
+        {position: 180, x: 1, y: 1, bottom: 6, left: 2, color: 'grey'},
+        {position: 181, x: 1, y: 2, bottom: 20, left: 2, color: 'orange'},
+        {position: 182, x: 1, y: 3, bottom: 34, left: 2, color: 'grey'},
+        {position: 183, x: 1, y: 4, bottom: 48, left: 2, color: 'green'},
+        {position: 184, x: 1, y: 5, bottom: 62, left: 2, color: 'yellow'},
+        {position: 185, x: 1, y: 6, bottom: 76, left: 2, color: 'blue'},
+        {position: 186, x: 1, y: 7, bottom: 90, left: 2, color: 'orange'},
+        {position: 187, x: 2, y: 7, bottom: 90, left: 16, color: 'grey'},
+        {position: 188, x: 3, y: 7, bottom: 90, left: 30, color: 'green'},
+        {position: 189, x: 4, y: 7, bottom: 90, left: 44, color: 'yellow'},
+        {position: 190, x: 5, y: 7, bottom: 90, left: 58, color: 'blue'}
     ];
 
 
@@ -228,16 +271,40 @@ $(function () {
 
         for (var i = 0; i < +numberOfPlayers; i++) {
             var templateScore = '<li class="statistic__player statistic__player_' + window.playersArray[i].id + '" data-statistic-id="' + window.playersArray[i].id + '">' +
+                '<div class="statistic__wrapper">' +
                 '<div class="statistic__icon"></div>' +
+                '<div class="statistic__name"></div>' +
+                '</div>' +
                 '<div class="statistic__amount">' + window.playersArray[i].score + '</div>' +
                 '</li>';
             var templateChips = '<div class="player player_' + window.playersArray[i].id + '" data-activity="' + window.playersArray[i].activity + '" data-player="' + window.playersArray[i].id + '">' +
-                '<div class="player-number">' + window.playersArray[i].id + '</div>' +
+                '</div>';
+            var templatePlayerName = '<div class="first-start__player">' +
+                '<label for="' + window.playersArray[i].id + '">' +
+                '<input class="js-name-player" type="text" id="' + window.playersArray[i].id + '" placeholder="Player ' + window.playersArray[i].id + '">' +
+                '</label>' +
                 '</div>';
 
             $('.statistic__list').append(templateScore);
             $(templateChips).appendTo($('.js-start-line'));
+            $(templatePlayerName).appendTo($('.first-start__players'));
         }
+        $('.first-start__step_2').addClass('hidden');
+        $('.first-start__step_3').removeClass('hidden');
+    });
+
+    $('.js-go').on('click', function () {
+        var names = $('.js-name-player');
+        for (var i = 0; i < window.playersArray.length; i++) {
+            if (names[i].value.length == 0) {
+                window.playersArray[i].name = names[i].placeholder;
+                $('.statistic__player[data-statistic-id="' + (i + 1) + '"]').find('.statistic__name').text(names[i].placeholder + ':');
+            } else {
+                window.playersArray[i].name = names[i].value;
+                $('.statistic__player[data-statistic-id="' + (i + 1) + '"]').find('.statistic__name').text(names[i].value + ':');
+            }
+        }
+
         $(this).closest('.first-start').addClass('hidden');
     });
 
@@ -381,15 +448,24 @@ $(function () {
     }
 
     function checkTheNumberOfCards() {
-        if (window.imagesArrayBlue.length == 0 ||
-            window.imagesArrayGreen.length == 0 ||
-            window.imagesArrayOrange.length == 0 ||
-            window.imagesArrayYellow.length == 0) {
+        if (window.imagesArrayBlue.length == 0 || window.imagesArrayGreen.length == 0 || window.imagesArrayOrange.length == 0 || window.imagesArrayYellow.length == 0) {
             showWinner();
         }
     }
 
     function showWinner() {
-        console.log('Тут будет победитель')
+        $('.end').removeClass('hidden');
+        var number = 0;
+        for (var i = 0; i < window.playersArray.length; i++) {
+            if (number < window.playersArray[i].score) {
+                number = window.playersArray[i].score;
+            }
+        }
+        for (var j = 0; j < window.playersArray.length; j++) {
+            if (window.playersArray[j].score == number) {
+                var winnerTemplate = '<div class="winner">' + window.playersArray[j].name + '</div>';
+                $(winnerTemplate).appendTo($('.end__winners'));
+            }
+        }
     }
 });
